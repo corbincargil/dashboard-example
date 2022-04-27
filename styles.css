@@ -1,0 +1,45 @@
+:root{
+
+}
+
+body{
+
+}
+
+div.dashboard-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    gap: 10px;
+}
+
+div.header{
+    background-color: rgba(255, 0, 0, 0.538);
+    grid-area: 1/2/2/4;
+}
+
+div.nav{
+    background-color: rgba(0, 0, 255, 0.496);
+    grid-area: 1/1/4/2;
+}
+
+div.projects-container{
+    background-color: rgba(255, 255, 0, 0.512);
+    grid-area: 2/2/4/3;
+}
+
+#all-projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 10px;
+}
+div.projects{
+    margin: 10px;
+    background-color: aliceblue;
+    border: 1px solid black
+}
+
+div.sidebar{
+    background-color: rgba(0, 128, 0, 0.472);
+    grid-area: 2/3/4/4;
+}
