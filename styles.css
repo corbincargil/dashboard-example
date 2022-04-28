@@ -133,7 +133,13 @@ div.projects-container{
     gap: 15px;
 }
 div.projects{
+    display: flex;
+    flex-direction: column;
+}
 
+.project-icons{
+    display: flex;
+    justify-content: right;
 }
 
 div.sidebar{
@@ -146,6 +152,7 @@ div.footer{
     padding: var(--dash-component-padding);
     background-color: rgba(137, 43, 226, 0.499);
     grid-area: 4/1/5/4;
+    text-align: center;
 }
 
 .projects,
@@ -159,4 +166,35 @@ div.footer{
 
 .announcements p{
     font-size: 12px;
+}
+
+/*media queries*/
+@media screen and (max-width: 1000px) {
+    div.nav{
+        font-size: .9rem;
+    }
+
+    div.dashboard-wrapper{
+        display: grid;
+        grid-template-columns: 200px 2fr 200px;
+        grid-template-rows: minmax(150px,160px) 2fr 2fr .5fr;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    body{
+        font-size: 50%;
+    }
+    div.nav{
+        font-size: 0;
+    }
+
+    div.dashboard-wrapper{
+        display: grid;
+        grid-template-columns: 90px 1fr 100px;
+        grid-template-rows: minmax(150px,160px) 2fr 2fr .5fr;
+    }
+    .button{
+        font-size: 10px;
+    }
 }
