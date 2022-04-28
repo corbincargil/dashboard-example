@@ -1,6 +1,6 @@
 :root{
     --dash-component-padding: 10px;
-    --main-bg-color: rgb(195, 195, 195);
+    --main-bg-color: rgb(234, 234, 234);
     --secondary-bg-color: white;
     --card-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     --card-padding: 10px;
@@ -21,7 +21,7 @@ div.dashboard-wrapper{
 
 div.header{
     padding: var(--dash-component-padding);
-    background-color: rgba(255, 0, 0, 0.461);
+    background-color: var(--secondary-bg-color);
     grid-area: 1/2/2/4;
     display: flex;
     flex-direction: column;
@@ -123,7 +123,7 @@ div.nav{
 
 div.projects-container{
     padding: var(--dash-component-padding) var(--dash-component-padding) 50px;
-    background-color: rgba(255, 255, 0, 0.512);
+    background-color: var(--main-bg-color);
     grid-area: 2/2/4/3;
 }
 
@@ -133,8 +133,15 @@ div.projects-container{
     gap: 15px;
 }
 div.projects{
+    background-color: var(--secondary-bg-color);
     display: flex;
     flex-direction: column;
+}
+
+.projects:hover,
+.nav-comp:hover {
+    transform: scale(1.05);
+    transition-duration: .5s;
 }
 
 .project-icons{
@@ -144,13 +151,13 @@ div.projects{
 
 div.sidebar{
     padding: var(--dash-component-padding);
-    background-color: rgba(0, 128, 0, 0.472);
+    background-color: var(--main-bg-color);
     grid-area: 2/3/4/4;
 }
 
 div.footer{
     padding: var(--dash-component-padding);
-    background-color: rgba(137, 43, 226, 0.499);
+    background-color: var(--main-bg-color);
     grid-area: 4/1/5/4;
     text-align: center;
 }
@@ -187,14 +194,31 @@ div.footer{
     }
     div.nav{
         font-size: 0;
+        align-items: flex-end;
+    }
+    .nav li{
+        justify-content: left;
+    }
+    .profile-cluster{
+        font-size: 0;
+    }
+    .greeting img{
+        display: none;
+    }
+
+    .buttons{
+        grid-area: 1/6/2/11;
     }
 
     div.dashboard-wrapper{
         display: grid;
-        grid-template-columns: 90px 1fr 100px;
+        grid-template-columns: 65px .8fr 120px;
         grid-template-rows: minmax(150px,160px) 2fr 2fr .5fr;
     }
     .button{
         font-size: 10px;
+    }
+    .project-icons{
+        transform: scale(0.75);
     }
 }
