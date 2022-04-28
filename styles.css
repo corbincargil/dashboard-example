@@ -15,7 +15,7 @@ body{
 
 div.dashboard-wrapper{
     display: grid;
-    grid-template-columns: minmax(160px,200px) 2fr minmax(200px,300px);
+    grid-template-columns: minmax(235px,250px) 2fr minmax(200px,300px);
     grid-template-rows: minmax(150px,160px) 2fr 2fr .5fr;
 }
 
@@ -37,13 +37,16 @@ div.header{
 }
 
 .search-bar{
+    grid-area: 1/1/2/6;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 4px;
 }
 
 .search-bar input{
     border-radius: 12px;
+    flex: 1 1 700px;
     border: 1px solid var(--main-bg-color);
     background-color: var(--main-bg-color);
 }
@@ -101,7 +104,7 @@ div.nav{
     flex-direction: column;
     color: var(--secondary-bg-color);
     font-weight: 700;
-    font-size: 1.05rem
+    font-size: 1.3rem;
 }
 
 .nav ul li{
@@ -109,9 +112,13 @@ div.nav{
     line-height: 40px;
 }
 
-.nav-comp{
+.nav-comp, .nav-comp li{
     display: flex;
     align-items: center;
+}
+
+.nav-comp img{
+    margin-right: 10px;
 }
 
 div.projects-container{
